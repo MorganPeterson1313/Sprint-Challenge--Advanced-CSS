@@ -7,5 +7,29 @@
     justify-items: @justify-item;
     align-items: @align-item;
     align-content: center;
+
+    
 }
 
+.custom-button(@width:100px; @font-size: 16px){
+
+background-color: black;
+color: white;
+width: @width;
+border-radius: 5%;
+font-size: @font-size;
+height: 30px;
+
+&:hover{
+    background-color: midnightblue;
+    color: aquamarine;
+}
+
+}
+
+
+.btn{
+
+    .center();
+    .custom-button();
+}
