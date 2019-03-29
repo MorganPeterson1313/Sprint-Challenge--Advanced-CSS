@@ -1,1 +1,44 @@
 // Mixins Here
+
+.center(@align-item: center; @justify-item: center){
+
+    display: flex;
+    justify-content: center;
+    justify-items: @justify-item;
+    align-items: @align-item;
+    align-content: center;
+
+    
+}
+
+.custom-button(@width:100px; @font-size: 16px){
+
+background-color: black;
+color: white;
+width: @width;
+border-radius: 5%;
+font-size: @font-size;
+height: 30px;
+
+&:hover{
+    background-color: midnightblue;
+    color: aquamarine;
+}
+
+}
+
+
+.btn{
+
+    .center();
+    .custom-button();
+
+    @media@mobile{
+   
+   .custom-button(460px, 20px);
+    margin-bottom: 5%;
+    margin-left: 3%;
+    height: 50px;
+    }
+
+}
